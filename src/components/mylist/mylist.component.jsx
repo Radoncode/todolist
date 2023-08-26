@@ -1,6 +1,12 @@
-const MyList = () => {
+import Task from "../task/task.component";
+
+const MyList = ({task}) => {
+
     return (
-        <h1>My Todo List</h1>
+        <div>
+            <h1>My Todo List</h1>        
+                <Task task={task}/>          
+        </div>    
     )
 }
 
