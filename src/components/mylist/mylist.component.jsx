@@ -1,11 +1,11 @@
 import Task from "../task/task.component";
 
-const MyList = ({task}) => {
+const MyList = ({tasks}) => {
 
     return (
         <div>
             <h1>My Todo List</h1>        
-                <Task task={task}/>          
+                <Task tasks={tasks}/>          
         </div>    
     )
 }

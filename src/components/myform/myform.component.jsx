@@ -2,7 +2,7 @@ import { Form, Button, InputGroup, Row, Col } from "react-bootstrap";
 
 const MyForm = (props) => {
     
-const { handleChange, handleClick } = props;
+const { handleChange, handleClick, value} = props;
 
  return (
         <Form>
@@ -15,7 +15,7 @@ const { handleChange, handleClick } = props;
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
                     onChange={handleChange}
-                    
+                    value={value}
                     />
                     </InputGroup>
                     <Button variant="info" id="button-addon2"  onClick={handleClick}>
