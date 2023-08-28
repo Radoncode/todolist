@@ -1,14 +1,15 @@
 import Toast from 'react-bootstrap/Toast';
 
-const Task = ({tasks}) => {
-   console.log(tasks);
+const Task = ({tasks, handleClose}) => {
+
     return (
         <div>
         {
-            tasks ? tasks.map((task, index) => <Toast
+            tasks && tasks.map((task, index) => <Toast
             className="mx-auto m-1"
-            bg={{variant: 'dark'}}
+            bg='light'
             key={index}
+            onClose={() => handleClose(task)} // we propagate the function through the props to the parent app
           >
             <Toast.Header>
               <img
@@ -21,7 +22,7 @@ const Task = ({tasks}) => {
             <Toast.Body className={'Dark'}>
                 {task}
             </Toast.Body>
-          </Toast>) : <li></li>
+          </Toast>)
         }
         </div>     
     )
