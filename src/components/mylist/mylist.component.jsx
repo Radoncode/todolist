@@ -1,11 +1,10 @@
 import Task from "../task/task.component";
 
-const MyList = ({tasks, handleClose}) => {
+const MyList = ({tasks, handleClose, handleCheckChange}) => {
     
     return (
-        <div>
-            <h1>My Todo List</h1>        
-                <Task tasks={tasks} handleClose={handleClose} />          
+        <div>       
+            <Task tasks={tasks} handleClose={handleClose} handleCheckChange={handleCheckChange} />          
         </div>    
     )
 }

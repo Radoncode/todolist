@@ -1,29 +1,29 @@
 import { Form, Button, InputGroup, Row, Col } from "react-bootstrap";
+import { FaSquarePlus } from 'react-icons/fa6';
 
 const MyForm = (props) => {
     
 const { handleChange, handleClick, value} = props;
 
  return (
-        <Form>
-                <h1>My task</h1>
-                <Row>
-                <Col lg="2"  className="mx-auto" >
-                    <InputGroup className="mb-3">
+                <Row className="d-flex justify-content-lg-center mt-5 mb-4">
+                <Col lg="2" className="pe-1">
+                    <InputGroup>
                     <Form.Control
-                    placeholder="Add your task here !"
                     aria-label="Recipient's username"
                     aria-describedby="basic-addon2"
                     onChange={handleChange}
                     value={value}
                     />
                     </InputGroup>
-                    <Button variant="info" id="button-addon2"  onClick={handleClick}>
-                    Click here for adding a task!
+                </Col>
+                <Col lg="1" className=" d-flex justify-content-lg-start ps-1">
+                    <Button onClick={handleClick}>
+                    <FaSquarePlus />
                     </Button>
-                </Col>       
+                </Col>
+      
                 </Row>               
-        </Form>
     )
 }
 
