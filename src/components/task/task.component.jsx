@@ -3,7 +3,7 @@ import { Form } from 'react-bootstrap';
 import { FaTrashCan } from  'react-icons/fa6'
 
 const Task = ({tasks, handleClose, handleCheckChange}) => {
-    console.log(tasks)
+
     return (
         <div>
         {
